@@ -1,8 +1,8 @@
 # CoreMark-PRO on Aquila
 
->This is the CoreMark-PRO benchmark ported for bare-metal execution on the Aquila RISC-V SoC by Cheng-Yu Hsu. Each workload is compiled as a separate ELF binary.
->You can use make to build all workloads at build/{workload_name}/{workload_name}.elf.
->To build a single workload, use `make` (default: core), you may change the makefile to switch to another workflow.
+>This is the CoreMark-PRO benchmark ported for bare-metal execution on the Aquila RISC-V SoC by Cheng-Yu Hsu. Each workload is compiled as a separate ELF binary. \
+>You can use make to build single workload at build/{workload_name}.elf. \
+>To build a single workload, use `make` (default: core), you may change the makefile to switch to another workflow. \
 >Since the programs are large, you have to run it on the board.
 
 ## Changes from upstream
