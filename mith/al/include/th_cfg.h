@@ -394,7 +394,7 @@ Please refer to LICENSE.md for the specific license agreement that pertains to t
 #endif
 
 #if !HAVE_FILEIO
-#error "This version of the test harness does not have internal memory based file management"
+// #error "This version of the test harness does not have internal memory based file management"
 #endif
 
 #if (HAVE_FILEIO && !USE_TH_FILEIO && !FAKE_FILEIO) 

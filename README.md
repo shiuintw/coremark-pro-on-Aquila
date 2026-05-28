@@ -1,3 +1,19 @@
+# CoreMark-PRO on Aquila
+
+>This is the CoreMark-PRO benchmark ported for bare-metal execution on the Aquila RISC-V SoC by Cheng-Yu Hsu. Each workload is compiled as a separate ELF binary.
+>You can use make to build all workloads at build/{workload_name}/{workload_name}.elf.
+>To build a single workload, use `make` (default: core), you may change the makefile to switch to another workflow.
+>Since the programs are large, you have to run it on the board.
+
+## Changes from upstream
+
+* Replaced original Makefile-based build flow with a custom one targeting Aquila SoC
+* Added bare-metal board support using custom elibc from Aquila belonging to [eisl-nctu](https://github.com/eisl-nctu)
+* Adapted adaptation layer (mith/al/src/th_al.c) for UART output and timing on Aquila
+* Configured adaptation layer macros (`mith/al/include/th_cfg.h`) for bare-metal single-thread operation
+* Removed original .mak build files (not used in bare-metal flow)
+* Benchmark source code (benchmarks/, workloads/, mith/src/, mith/include/) remains unmodified — verify with md5sum -c coremarkpro.md5
+
 # About
 
 CoreMark®-PRO is a comprehensive, advanced processor benchmark that works with and enhances the market-proven industry-standard EEMBC CoreMark® benchmark. While CoreMark stresses the CPU pipeline, CoreMark-PRO tests the entire processor, adding comprehensive support for multicore technology, a combination of integer and floating-point workloads, and data sets for utilizing larger memory subsystems. Together, EEMBC CoreMark and CoreMark-PRO provide a standard benchmark covering the spectrum from low-end microcontrollers to high-performance computing processors.

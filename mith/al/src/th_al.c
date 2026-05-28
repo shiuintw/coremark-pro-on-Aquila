@@ -637,7 +637,8 @@ int	al_vfscanf(ee_FILE *stream, const char *format, va_list ap)
 #elif	HAVE_FILEIO
 	return vfscanf(stream,format,ap);
 #else
-	return NULL;
+	// return NULL;
+	return 0;
 #endif
 }
 
